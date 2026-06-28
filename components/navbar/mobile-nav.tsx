@@ -14,7 +14,7 @@ import { profile } from "@/data/profile";
 
 export default function MobileNav() {
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <Sheet>
         <SheetTrigger asChild>
           <button
@@ -31,10 +31,16 @@ export default function MobileNav() {
         >
           <div className="mt-10 flex flex-col gap-8">
             <Link
-              href="/"
-              className="text-2xl font-bold text-[#60A5FA]"
+              href="#home"
+              className="text-3xl font-extrabold"
             >
-              {profile.shortName}
+              <span className="text-white">
+                {profile.shortName}
+              </span>
+
+              <span className="text-[#60A5FA]">
+                .
+              </span>
             </Link>
 
             <nav className="flex flex-col gap-6">
@@ -53,7 +59,7 @@ export default function MobileNav() {
               href={profile.resume}
               className="mt-4 rounded-xl bg-[#60A5FA] px-4 py-3 text-center font-semibold text-[#0B1120] transition hover:bg-[#38BDF8]"
             >
-              Resume
+              Download Resume
             </a>
           </div>
         </SheetContent>

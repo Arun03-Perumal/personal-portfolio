@@ -16,8 +16,12 @@ export const navigation = [
     href: "#projects",
   },
   {
-    name: "Education",
-    href: "#education",
+    name: "Journey",
+    href: "#journey",
+  },
+  {
+    name: "Certificates",
+    href: "#certificates",
   },
   {
     name: "Contact",

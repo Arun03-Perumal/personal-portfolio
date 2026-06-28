@@ -11,43 +11,45 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[calc(100vh-64px)] items-center overflow-hidden"
+      className="relative overflow-hidden pt-8 pb-20 lg:pt-12 lg:pb-24"
     >
       {/* Background Blur */}
-      <div className="absolute left-10 top-20 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
-      <div className="absolute right-10 bottom-10 h-80 w-80 rounded-full bg-violet-500/10 blur-3xl" />
+      <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#60A5FA]/10 blur-[120px]" />
+      <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-[#A78BFA]/10 blur-[120px]" />
 
       <div className="container-width relative z-10">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          {/* Left Content */}
+        <div className="grid min-h-[calc(100vh-72px)] items-center gap-12 lg:grid-cols-2">
+          {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {/* Badge */}
-            <div className="mb-6 inline-flex items-center rounded-full border border-[#1E293B] bg-[#111827] px-4 py-2">
-              <span className="mr-2 h-2 w-2 rounded-full bg-green-500" />
-              <span className="text-sm text-[#94A3B8]">
+            {/* Availability Badge */}
+            <div className="mb-6 inline-flex items-center rounded-full border border-border bg-card px-5 py-2">
+              <span className="mr-3 h-2.5 w-2.5 rounded-full bg-green-500" />
+
+              <span className="text-sm text-muted-foreground">
                 Available for Internship
               </span>
             </div>
 
             {/* Heading */}
-            <h1 className="text-5xl font-extrabold leading-tight lg:text-7xl">
+            <h1 className="text-5xl font-black leading-tight tracking-tight md:text-6xl lg:text-7xl">
               Hi, I'm
-              <span className="mt-2 block text-[#60A5FA]">
+
+              <span className="mt-3 block text-primary">
                 {profile.name}
               </span>
             </h1>
 
             {/* Role */}
-            <h2 className="mt-5 text-2xl font-semibold text-[#94A3B8]">
+            <h2 className="mt-5 text-2xl font-semibold text-muted-foreground">
               {profile.title}
             </h2>
 
             {/* Description */}
-            <p className="mt-8 max-w-xl text-lg leading-8 text-[#94A3B8]">
+            <p className="mt-8 max-w-xl text-lg leading-8 text-muted-foreground">
               {profile.description}
             </p>
 
@@ -64,12 +66,12 @@ export default function Hero() {
               </SecondaryButton>
             </div>
 
-            {/* Tech Stack */}
+            {/* Skills */}
             <div className="mt-12 flex flex-wrap gap-3">
               {profile.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-full border border-[#1E293B] bg-[#111827] px-4 py-2 text-sm text-[#F8FAFC]"
+                  className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium transition-all duration-300 hover:border-primary hover:text-primary"
                 >
                   {skill}
                 </span>
@@ -77,49 +79,61 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Content */}
+          {/* RIGHT */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
-            <div className="w-full max-w-md rounded-3xl border border-[#1E293B] bg-[#111827] p-8 shadow-xl">
-              {/* Image Placeholder */}
-              <div className="mx-auto flex h-64 w-64 items-center justify-center rounded-2xl border border-dashed border-[#60A5FA]/40 bg-[#0B1120]">
-                <span className="text-lg text-[#94A3B8]">
-                  Profile Image
-                </span>
-              </div>
+            <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-2xl">
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#60A5FA]/5 via-transparent to-[#A78BFA]/5" />
 
-              {/* Details */}
-              <div className="mt-8 text-center">
-                <h3 className="text-2xl font-bold text-white">
-                  {profile.name}
-                </h3>
+              <div className="relative z-10">
+                {/* Profile Image */}
+                <div className="mx-auto flex h-64 w-64 items-center justify-center rounded-3xl border border-dashed border-primary/40 bg-background">
+                  <span className="text-muted-foreground">
+                    Profile Image
+                  </span>
+                </div>
 
-                <p className="mt-2 text-[#94A3B8]">
-                  {profile.college}
-                </p>
+                {/* Details */}
+                <div className="mt-8 text-center">
+                  <h3 className="text-3xl font-bold">
+                    {profile.name}
+                  </h3>
 
-                <p className="mt-1 text-[#94A3B8]">
-                  {profile.location}
-                </p>
-              </div>
+                  <p className="mt-2 text-primary">
+                    {profile.title}
+                  </p>
 
-              {/* Stats */}
-              <div className="mt-10 grid grid-cols-3 gap-4 border-t border-[#1E293B] pt-6">
-                {profile.stats.map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <h4 className="text-xl font-bold text-[#60A5FA]">
-                      {stat.value}
-                    </h4>
+                  <p className="mt-5 text-muted-foreground">
+                    {profile.college}
+                  </p>
 
-                    <p className="mt-1 text-sm text-[#94A3B8]">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
+                  <p className="text-muted-foreground">
+                    {profile.location}
+                  </p>
+                </div>
+
+                {/* Stats */}
+                <div className="mt-10 grid grid-cols-3 gap-4 border-t border-border pt-8">
+                  {profile.stats.map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="text-center"
+                    >
+                      <h4 className="text-2xl font-bold text-primary">
+                        {stat.value}
+                      </h4>
+
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
