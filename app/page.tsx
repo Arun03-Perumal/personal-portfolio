@@ -1,20 +1,20 @@
-import SectionContainer from "@/components/common/section-container";
-import SectionHeading from "@/components/common/section-heading";
+import Navbar from "@/components/navbar/navbar";
+import Hero from "@/components/hero/hero";
+import About from "@/components/about/about";
+import Skills from "@/components/skills/skills";
+import Projects from "@/components/projects/projects";
 
 export default function Home() {
   return (
-    <main>
-      <SectionContainer>
-        <SectionHeading
-          title="Portfolio Under Construction"
-          subtitle="Phase 2"
-        />
+    <>
+      <Navbar />
 
-        <p className="mt-6 max-w-2xl text-muted-foreground">
-          Welcome! This confirms that our reusable layout components are working.
-          We'll begin building the Hero section in the next phase.
-        </p>
-      </SectionContainer>
-    </main>
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+      </main>
+    </>
   );
 }
