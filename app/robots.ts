@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
 
-    sitemap: "https://your-domain.vercel.app/sitemap.xml",
+    sitemap: "https://arun-perumal.vercel.app/sitemap.xml",
   };
 }

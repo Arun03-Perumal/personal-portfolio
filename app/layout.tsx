@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.vercel.app"),
+  metadataBase: new URL("https://arun-perumal.vercel.app"),
 
   title: {
     default: "Arun Perumal | Full Stack Developer",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     description:
       "Explore the portfolio of Arun Perumal showcasing projects, technical skills, certifications and modern web development experience.",
 
-    url: "https://your-domain.vercel.app",
+    url: "https://arun-perumal.vercel.app",
 
     siteName: "Arun Portfolio",
 
@@ -110,7 +110,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://your-domain.vercel.app",
+    canonical: "https://arun-perumal.vercel.app",
   },
 };
 
