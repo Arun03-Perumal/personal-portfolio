@@ -5,7 +5,6 @@ export default function About() {
   return (
     <SectionContainer id="about">
       <div className="grid gap-12 lg:grid-cols-2">
-        {/* Left */}
         <div>
           <SectionHeading
             title="About Me"
@@ -33,7 +32,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Right */}
         <div className="rounded-3xl border border-border bg-card p-8">
           <h3 className="text-2xl font-bold">
             Quick Information
@@ -41,50 +39,31 @@ export default function About() {
 
           <div className="mt-8 space-y-6">
             <div>
-              <p className="text-sm text-muted-foreground">
-                Name
-              </p>
-
-              <p className="mt-1 font-medium">
-                Arun Perumal
-              </p>
+              <p className="text-sm text-muted-foreground">Name</p>
+              <p className="mt-1 font-medium">Arun Perumal</p>
             </div>
 
             <div>
-              <p className="text-sm text-muted-foreground">
-                Education
-              </p>
-
+              <p className="text-sm text-muted-foreground">Education</p>
               <p className="mt-1 font-medium">
                 B.E. Computer Science & Engineering
               </p>
             </div>
 
             <div>
-              <p className="text-sm text-muted-foreground">
-                College
-              </p>
-
+              <p className="text-sm text-muted-foreground">College</p>
               <p className="mt-1 font-medium">
                 Meenakshi College of Engineering
               </p>
             </div>
 
             <div>
-              <p className="text-sm text-muted-foreground">
-                Location
-              </p>
-
-              <p className="mt-1 font-medium">
-                Chennai, Tamil Nadu
-              </p>
+              <p className="text-sm text-muted-foreground">Location</p>
+              <p className="mt-1 font-medium">Chennai, Tamil Nadu</p>
             </div>
 
             <div>
-              <p className="text-sm text-muted-foreground">
-                Career Goal
-              </p>
-
+              <p className="text-sm text-muted-foreground">Career Goal</p>
               <p className="mt-1 font-medium">
                 Full Stack Software Engineer
               </p>

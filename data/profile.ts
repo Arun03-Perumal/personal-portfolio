@@ -18,15 +18,15 @@ export const profile = {
 
   location: "Chennai, India",
 
-  email: "your-email@example.com",
+  email: "arunperumal@mce.edu.in",
 
   resume: "/resume/resume.pdf",
 
   image: "/images/profile.png",
 
-  github: "#",
+  github: "https://github.com/Arun03-Perumal",
 
-  linkedin: "#",
+  linkedin: "https://www.linkedin.com/in/arun-perumal/",
 
   skills: [
     "Next.js",
