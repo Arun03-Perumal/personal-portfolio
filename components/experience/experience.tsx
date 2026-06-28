@@ -25,7 +25,7 @@ export default function Experience() {
             </h3>
 
             <p className="mt-2 font-medium text-muted-foreground">
-              {exp.company}
+              {exp.organization}
             </p>
 
             <p className="mt-6 leading-7 text-muted-foreground">
